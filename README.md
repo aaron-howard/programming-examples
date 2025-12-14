@@ -1,4 +1,4 @@
-# Fun Stuff Repository
+# Programming fundamental examples in JavaScript and Python
 
 A comprehensive collection of programming examples, algorithms, patterns, and concepts in JavaScript and Python.
 

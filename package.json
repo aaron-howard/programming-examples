@@ -1,0 +1,16 @@
+{
+  "name": "funstuff",
+  "private": true,
+  "scripts": {
+    "format:py": "ruff format .",
+    "lint:py": "ruff check .",
+    "format:js": "prettier --write \"**/*.js\"",
+    "lint:js": "eslint \"**/*.js\"",
+    "format": "npm run format:py && npm run format:js",
+    "lint": "npm run lint:py && npm run lint:js"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  }
+}

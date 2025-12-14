@@ -1,0 +1,61 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Lint (All)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "lint"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Format (All)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "format"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Ruff: Check",
+      "type": "shell",
+      "command": "${command:python.interpreterPath}",
+      "args": ["-m", "ruff", "check", "."],
+      "problemMatcher": []
+    },
+    {
+      "label": "Ruff: Format",
+      "type": "shell",
+      "command": "${command:python.interpreterPath}",
+      "args": ["-m", "ruff", "format", "."],
+      "problemMatcher": []
+    },
+    {
+      "label": "Ruff: Format (Check)",
+      "type": "shell",
+      "command": "${command:python.interpreterPath}",
+      "args": ["-m", "ruff", "format", "--check", "."],
+      "problemMatcher": []
+    },
+    {
+      "label": "ESLint: JS",
+      "type": "shell",
+      "command": "npx",
+      "args": ["eslint", "\"**/*.js\""],
+      "problemMatcher": []
+    },
+    {
+      "label": "Prettier: Check JS",
+      "type": "shell",
+      "command": "npx",
+      "args": ["prettier", "--check", "\"**/*.js\""],
+      "problemMatcher": []
+    },
+    {
+      "label": "Prettier: Write JS",
+      "type": "shell",
+      "command": "npx",
+      "args": ["prettier", "--write", "\"**/*.js\""],
+      "problemMatcher": []
+    }
+  ]
+}

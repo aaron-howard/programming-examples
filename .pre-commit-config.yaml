@@ -1,0 +1,62 @@
+repos:
+  - repo: local
+    hooks:
+      # Python (pre-commit): auto-format + lint
+      - id: ruff-format
+        name: ruff format
+        entry: python -m ruff format
+        language: system
+        types: [python]
+        stages: [pre-commit]
+
+      - id: ruff-check
+        name: ruff check
+        entry: python -m ruff check
+        language: system
+        types: [python]
+        stages: [pre-commit]
+
+      # Python (pre-push): check-only (no modifications)
+      - id: ruff-format-check
+        name: ruff format (check)
+        entry: python -m ruff format --check
+        language: system
+        types: [python]
+        stages: [pre-push]
+
+      - id: ruff-check-push
+        name: ruff check (push)
+        entry: python -m ruff check
+        language: system
+        types: [python]
+        stages: [pre-push]
+
+      # JavaScript (pre-commit): auto-format + lint
+      - id: prettier-write
+        name: prettier (write)
+        entry: npx prettier --write
+        language: system
+        files: \.js$
+        stages: [pre-commit]
+
+      - id: eslint-check
+        name: eslint
+        entry: npx eslint
+        language: system
+        files: \.js$
+        stages: [pre-commit]
+
+      # JavaScript (pre-push): check-only (no modifications)
+      - id: prettier-check
+        name: prettier (check)
+        entry: npx prettier --check
+        language: system
+        files: \.js$
+        stages: [pre-push]
+
+      - id: eslint-check-push
+        name: eslint (push)
+        entry: npx eslint
+        language: system
+        files: \.js$
+        stages: [pre-push]

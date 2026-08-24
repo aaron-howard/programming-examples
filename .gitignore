@@ -41,3 +41,6 @@ Desktop.ini
 # VS Code (keep shared workspace config)
 .vscode/*
 !.vscode/tasks.json
+
+# Cloned skill repos (symlinked into ~/.claude/skills)
+last30days-skill/
